@@ -13,16 +13,16 @@ arguments
 end
 %
 %
-% Programa para cálculo da resposta em frequência de um sistema utilizando
-% sua resposta no tempo ao impulso unitário e a transformada de Fourier.
+% Programa para cÃ¡lculo da resposta em frequÃªncia de um sistema utilizando
+% sua resposta no tempo ao impulso unitÃ¡rio e a transformada de Fourier.
 %
-% Chamada do programa para selecionar o diretório e o arquivo de dados
+% Chamada do programa para selecionar o diretÃ³rio e o arquivo de dados
 % de entrada.
 %
-% Programa para selecionar o diretório e o arquivo de dados de entrada.
+% Programa para selecionar o diretÃ³rio e o arquivo de dados de entrada.
 %
 %
-% Fornecimento pelo usuário do nome da variável que armazena os instantes
+% Fornecimento pelo usuÃ¡rio do nome da variÃ¡vel que armazena os instantes
 % de tempo.
 %
 fid = fopen("Dados.txt");
@@ -82,28 +82,28 @@ for i=fmin:fstep:fmax
 end
 %
 %
-% Início da contagem do tempo de execução do programa.
+% InÃ­cio da contagem do tempo de execuÃ§Ã£o do programa.
 %
 tic
 %
-% Cálculo do passo de integração.
+% CÃ¡lculo do passo de integraÃ§Ã£o.
 %
 Dt=t(2)-t(1);
 %
-% Determinação do número de instantes de tempo ou de valores da resposta
+% DeterminaÃ§Ã£o do nÃºmero de instantes de tempo ou de valores da resposta
 % ao impulso.
 %
 n_t=length(t);
 %
-% Determinação do número de intervalos de tempo.
+% DeterminaÃ§Ã£o do nÃºmero de intervalos de tempo.
 %
 n_Dt=n_t-1;
 %
-% Definição da faixa da frequência de interesse.
+% DefiniÃ§Ã£o da faixa da frequÃªncia de interesse.
 %
 % f=fmin:fstep:fmax;
 %
-% Definição dos pontos de frequência para cálculo da transformada de
+% DefiniÃ§Ã£o dos pontos de frequÃªncia para cÃ¡lculo da transformada de
 % Fourier sem truncamento do tempo.
 %
 I=zeros(1,5);
@@ -119,23 +119,23 @@ end
 f1=f(I);
 w1=2*pi*f1;
 %
-% Chamada da rotina para cálculo da transformada de Fourier (F1) sem 
-% trumcamento do tempo nos pontos de frequência f1.
+% Chamada da rotina para cÃ¡lculo da transformada de Fourier (F1) sem 
+% trumcamento do tempo nos pontos de frequÃªncia f1.
 %
 F1=Fourier(Dt,n_Dt,t,ft,w1);
 %
-% Chamada da rotina para cálculo da transformada de Fourier (F) em todos
-% os pontos de frequência com trumcamento do tempo, quando:
+% Chamada da rotina para cÃ¡lculo da transformada de Fourier (F) em todos
+% os pontos de frequÃªncia com trumcamento do tempo, quando:
 %
 %        erro = max(abs( ( F(I)-F1 )./F1 ) )*100 <= tol;
 %
-% onde tol é a tolerância escolhida em %.
+% onde tol Ã© a tolerÃ¢ncia escolhida em %.
 %
 % tol=0.1;
 %
 [F,erro]=Fourier(Dt,n_Dt,t,ft,w,F1,I,tol);
 %
-% Fim da contagem do tempo de execução do programa.
+% Fim da contagem do tempo de execuÃ§Ã£o do programa.
 %
 time = toc;
 %
