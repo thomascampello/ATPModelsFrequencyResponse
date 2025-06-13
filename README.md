@@ -21,6 +21,7 @@ This repository contains all scripts required to reproduce the simulation and nu
 
 | File   | Related Figure(s) |	Description |
 |--------|-------------------|--------------|
+| Sistema 2 | - | RAR File with the files Resposta_Tempo_1us_1seg_10kHz_FT_2_2.mat, Resposta_Tempo_1us_1seg_10kHz_FT_1_2.mat, and Resposta_Tempo_1us_1seg_10kHz_FT_1_1.mat. |
 |Resposta_Tempo_1us_1seg_10kHz_FT_2_2.mat | - | Current Responses at the left-hand port due to the application of a balanced three-phase unit impulse voltage input at left-hand port in the 0 to 10 kHz FDNE of the two port test system. |
 |Resposta_Tempo_1us_1seg_10kHz_FT_1_2.mat | - | Current Responses at the left-hand port due to the application of a balanced three-phase unit impulse voltage input at right-hand in the 0 to 10 kHz FDNE of the two port test system. |
 |Resposta_Tempo_1us_1seg_10kHz_FT_1_1.mat | - | Current Responses at the right-hand port due to the application of a balanced three-phase unit impulse voltage input at right-hand in the 0 to 10 kHz FDNE of the two port test system. |
